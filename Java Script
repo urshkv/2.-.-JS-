@@ -1,0 +1,105 @@
+//task 1
+let country = 'Sweden';
+let access = country == 'Sweden' ? true : false;
+
+alert(access);
+
+//task 2
+let num = 10;
+for (let i = 0; i < 10; i++) {
+    num++;
+}
+
+alert(num); 
+
+//task 3
+for (let i = 0; i < 10; i += 2) {
+    let userInput = +prompt("Введите число:");
+    if (userInput === 10) {
+        alert("Равно 10");
+    } else {
+        alert("Не равно 10");
+    }
+}
+
+//task 4
+let count = +prompt("Сколько чисел вы хотите возвести в квадрат?");
+for (let i = 0; i < count; i++) {
+    alert(i * i);
+}
+
+//task 5
+for (let i = 1; i <= 100; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        alert("FizzBuzz");
+    } else if (i % 3 === 0) {
+        alert("Fizz");
+    } else if (i % 5 === 0) {
+        alert("Buzz");
+    } else {
+        alert(i);
+    }
+}
+
+//task 6
+let i = 0;
+while (i < 3) {
+    alert(`number ${i}!`);
+    i++;
+}
+
+//task 7
+function printValues(min, max) {
+    for (let i = min; i < max; i++) {
+        alert(i * i);
+    }
+}
+
+let min = +prompt("Введите значение:");
+let max = +prompt("Введите значение:");
+printValues(min, max);
+
+//task 8
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function getRandomRGB() {
+    const red = getRandomInteger(0, 256);  
+    const green = getRandomInteger(0, 256); 
+    const blue = getRandomInteger(0, 256);  
+
+    return `rgb(${red},${green},${blue})`;  
+}
+
+alert(getRandomRGB()); 
+
+//task 9
+function checkNumbers(n) {
+    for (let i = 1; i <= n; i += 0.5) {
+        if (i % 1 === 0) { 
+            alert(`${i} integer`);
+        } else {
+            alert(`${i} decimal`);
+        }
+    }
+}
+
+checkNumbers(3);
+
+//task 10
+function calcPrice(days) {
+    const dailyRate = 40;
+    
+    let totalPrice = days * dailyRate;
+    
+    if (days >= 7) {
+        totalPrice -= 50; 
+    } else if (days >= 3) {
+        totalPrice -= 20; 
+    }
+
+    alert("Итоговая стоимость аренды: $" + totalPrice);
+}
+
+calcPrice(5);  
